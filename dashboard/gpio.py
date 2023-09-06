@@ -2,6 +2,7 @@ from gpiozero import LED, Button, Buzzer
 from signal import pause
 from time import sleep
 import requests
+from app import flame_values
 # from Adafruit_ADS1x15 import ADS1x15
 
 def disengage():
@@ -43,8 +44,12 @@ def engage():
         red.on()
         sleep(0.1)
         red.off()
+        #call the function which sends a distress message.
         button._hold_time = 5
         if button.is_held:
             break
 
     pause()
+
+
+print(flame_values)
