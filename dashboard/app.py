@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect
-from gpio import engage
+from gpio import engage, disengage
 
 app = Flask(__name__)
 
@@ -12,6 +12,11 @@ def index():
 @app.route("/engage", methods = ["POST"])
 def eng():
     engage()
+    return redirect("/")
+
+@app.route("/disengage", methods = ["POST"])
+def deng():
+    disengage()
     return redirect("/")
 # @app.route('/whoami')
 # def whoami():

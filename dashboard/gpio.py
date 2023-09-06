@@ -4,6 +4,10 @@ from time import sleep
 import requests
 # from Adafruit_ADS1x15 import ADS1x15
 
+def disengage():
+    engage()
+
+
 def engage():
     button = Button(2)
     buzzer = Buzzer(3)
