@@ -998,3 +998,9 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+
+.room_indicator {
+  width: 200px;
+  height: 50px;
+  background: green;
+}
